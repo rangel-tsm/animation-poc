@@ -1,6 +1,12 @@
-# SMK Template (smk-template)
+# Animation POC
 
-Base template for future projects
+Logo animation examples
+
+## Update npmrc with GSAP Auth Token
+- sign into https://gsap.com/ with admin credentials from lastpass
+- navigate to My Account
+- in the Download section there will the token
+- replace the token placeholder in the .npmrc
 
 ## Install the dependencies
 ```bash
