@@ -1,6 +1,6 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <q-header bordered class="bg-transparent text-black" style="height:75px">
+    <q-header bordered class="bg-white text-black" style="height:75px">
       <q-toolbar class="fit">
         <q-toolbar-title>
           <img :src="headerLogo" alt="SMK Logo" style="width: 50%; height: 50px">
@@ -27,7 +27,7 @@
       <router-view />
     </q-page-container>
 
-    <q-footer elevated class="bg-transparent text-black" style="height:75px">
+    <q-footer elevated class="bg-white text-black" style="height:75px">
       <q-toolbar class="fit">
         <q-toolbar-title>
           <img :src="headerLogo" alt="SMK Logo" style="width: 25%; height: 50px">
