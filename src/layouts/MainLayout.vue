@@ -1,14 +1,5 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <q-header bordered class="bg-white text-black" style="height:75px">
-      <q-toolbar class="fit">
-        <q-toolbar-title>
-          <img :src="headerLogo" alt="SMK Logo" style="width: 50%; height: 50px">
-        </q-toolbar-title>
-        <q-btn v-if="drawerEnabled" flat round icon="menu" @click="leftDrawerOpen = !leftDrawerOpen" />
-      </q-toolbar>
-    </q-header>
-
     <q-drawer v-if="drawerEnabled" v-model="leftDrawerOpen" side="left" bordered show-if-above>
       <q-scroll-area class="fit">
         <q-list bordered separator>
@@ -26,14 +17,6 @@
     <q-page-container>
       <router-view />
     </q-page-container>
-
-    <q-footer elevated class="bg-white text-black" style="height:75px">
-      <q-toolbar class="fit">
-        <q-toolbar-title>
-          <img :src="headerLogo" alt="SMK Logo" style="width: 25%; height: 50px">
-        </q-toolbar-title>
-      </q-toolbar>
-    </q-footer>
   </q-layout>
 </template>
 
