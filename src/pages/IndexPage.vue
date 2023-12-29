@@ -1,5 +1,5 @@
 <template>
-  <q-page class="flex row justify-around q-gutter-md">
+  <q-page class="flex row justify-around q-gutter-md q-my-xl">
     <q-card class="q-px-md" style="height: fit-content;">
       <q-card-section class="row q-gutter-md">
         <p>Bounce and slide</p>
@@ -338,6 +338,15 @@
         </svg>
       </q-card-section>
     </q-card>
+    <q-card class="q-px-md" style="height: fit-content;">
+      <q-card-section class="row q-gutter-md">
+        <p>Floating up and fade</p>
+        <q-btn flat fab icon="refresh" @click="playAgain(21)"/>
+      </q-card-section>
+      <q-card-section class="flex row">
+        <div class="faf">brand.</div>
+      </q-card-section>
+    </q-card>
   </q-page>
 </template>
 
@@ -373,6 +382,7 @@ const tl17 = gsap.timeline();
 const tl18 = gsap.timeline();
 const tl19 = gsap.timeline();
 const tl20 = gsap.timeline();
+const tl21 = gsap.timeline({repeat: -1, repeatDelay: 1});
 
 const timelines = []
 timelines.push(tl0)
@@ -396,6 +406,8 @@ timelines.push(tl17)
 timelines.push(tl18)
 timelines.push(tl19)
 timelines.push(tl20)
+timelines.push(tl21)
+
 
 onMounted(() => {
   tl0.from(".test-o", {y: -200, opacity: 0, duration: 1, ease: "bounce"});
@@ -492,6 +504,9 @@ onMounted(() => {
   tl20.fromTo("#path.sddm.grey", {drawSVG: "0", fill: "black"}, {duration: 1.5, drawSVG: "100%", ease: "power1.out"}, "<+=.25");
   tl20.to("#path.sddm.cyan", {duration: .75, fill: "#6EE7D8"}, ">+=.25" );
   tl20.to("#path.sddm.grey", {duration: .75, fill: "#EDEDED"}, "<");
+
+  tl21.from(".faf", {y: 100, opacity: 0, duration: 1})
+  tl21.to(".faf", {opacity: 0, duration: 1}, ">+=3")
 })
 
 function playAgain(position) {
